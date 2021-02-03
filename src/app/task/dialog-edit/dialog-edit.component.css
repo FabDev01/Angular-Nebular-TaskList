@@ -1,0 +1,37 @@
+.dialogBox {
+    display: flex;
+    flex-direction: column;
+    width: 285px;
+    height: 232px;
+  }
+  
+  .btnDialog{
+    justify-content: center;
+  }
+  
+  .c-icon{
+    margin-right: 6px;
+    padding: 4px;
+    border-radius: 55%;
+    color: #FFFFFF;
+    opacity: 0.8;
+    margin-bottom: 5px;
+  }
+  
+  mat-option {
+    font-size: inherit;
+    line-height: 3em;
+    height: 3em;
+    margin-bottom: 6px;
+    
+  }
+
+  .btnSave{
+    background-color: #6200ea;
+    color: white;
+  }
+  
+  .btnDone{
+    background-color: #757575;
+    color: white;
+  }

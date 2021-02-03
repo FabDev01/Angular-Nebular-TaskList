@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Editar tarefa</h1>
+<div mat-dialog-content class="dialogBox">
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput autocomplete="off" type="text" [(ngModel)]="dataTask.name" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Categoria</mat-label>
+    <mat-select [(ngModel)]="dataTask.icon" >
+      <mat-option *ngFor="let cate of category" [value]="cate.icon" >
+        <mat-icon class="c-icon" [ngStyle]="{ background: cate.color || 'red' }" aria-hidden="false"
+          aria-label="Example home icon">{{ cate.icon }}</mat-icon>
+        {{ cate.type }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput [(ngModel)]="dataTask.description"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="btnDialog">
+  <button mat-button mat-dialog-close class="btnDone">Fechar</button>
+  <button mat-raised-button class="btnSave" (click)="salvarEdit(dataTask.id)"  >Salvar</button>
+</div>

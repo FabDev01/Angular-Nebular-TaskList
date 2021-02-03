@@ -1,0 +1,73 @@
+<div class="row mx-2" *ngIf="tarefas.length >= 1 ">
+    <div class="col-12">
+        <mat-card *ngIf="true" class="mat-card-Sombra">
+            <h2 class="subtitle" *ngIf="search === true">Pesquisar tarefa</h2>
+            <div class="title">
+                <h1 class="subtitle" *ngIf="search === false">Tarefas</h1>
+
+                <form *ngIf="search === true" class="formSearch">
+                    <mat-form-field class="subSearch">
+                        <mat-label>Insira o nome da Tarefa</mat-label>
+                        <input matInput placeholder="Ex. Lavar o Carro" autocomplete="off" />
+                    </mat-form-field>
+                    <button mat-mini-fab aria-label (click)="closeLupe()">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </form>
+
+                <button *ngIf="search === false" mat-mini-fab aria-label class="btnSearch" (click)="openSearch()">
+                    <mat-icon class="iconSearch">search</mat-icon>
+                </button>
+
+                <button *ngIf="search === false" class="c-background-a700" mat-mini-fab
+                    aria-label="Example icon button with a filter list icon" (click)="openDialogLembrete()">  <!--  -->
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+        
+        <div>
+            <mat-accordion  *ngFor="let task of tarefas " >  
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <div class="c-flex">
+                                <mat-icon class="c-icon" [ngStyle]="{
+                                        background: task.color || 'black'}" aria-hidden="false" aria-label="Example home icon">{{ task.icon }}</mat-icon>
+                                <h3 class="h3-task">{{ task.name }}</h3>
+                            </div>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p class="taskSubTitle">{{ task.description }}</p>
+                    <div class="btnDell">
+                        <button mat-icon-button color="primary" (click)="openDialogLembreteEdit(task)"  >
+                            <i class="fa fa-edit"></i>
+                        </button>
+                        <button class="deleteIcon" mat-icon-button color="accent" (click)="remover(task.id)"> 
+                            <mat-icon matSuffix>delete</mat-icon>
+                        </button>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+        </mat-card>
+    </div>
+</div>
+<div class="container-1" *ngIf="tarefas.length === 0 ">
+    <img class="img-part1"  src="../../assets/part-1.png" alt="a">
+</div>
+
+    <div class="tarefa-null" *ngIf="tarefas.length === 0 ">
+        
+        <img class="tarefa-null-img" src="assets/pixeltrue-idea.png" alt="logo" />
+    
+        <h1 class="tarefa-null-msg-1">Nenhuma Tarefa encontrada!</h1>
+    
+        <h1 class="tarefa-null-msg-2">Vamos dar um jeito nisso?</h1>
+        <button class=" tarefa-null-btn" button mat-button color="primary" (click)="openDialogLembrete()">
+            Começar
+        </button>
+    </div>
+
+    <div class="container-2" *ngIf="tarefas.length === 0 ">
+        <img class="img-part2" src="../../assets/part-2.png" alt="a">
+</div>

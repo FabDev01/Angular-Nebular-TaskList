@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>Nova tarefa</h1>
+<div mat-dialog-content style="max-width: 100vw;" class="dialogBox">
+  <mat-form-field appearance="fill" style="margin-bottom:3px;">
+    <mat-label>Nome</mat-label>
+    <input matInput autocomplete="off" type="text" [(ngModel)]="tarefa.name" />
+  </mat-form-field>
+  
+
+  <mat-form-field appearance="fill" style="margin-bottom:3px;">
+    <mat-label>Categoria</mat-label>
+    <mat-select [(ngModel)]="tarefa.icon" >
+      <mat-option *ngFor="let cate of category" [value]="cate.icon" >
+        <mat-icon class="c-icon" [ngStyle]="{ background: cate.color || 'red' }" aria-hidden="false"
+          aria-label="Example home icon">{{ cate.icon }}</mat-icon>
+        {{ cate.type }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput [(ngModel)]="tarefa.description"></textarea>
+  </mat-form-field>
+</div>
+<div *ngIf="error === true" class="displayError">
+  <p class="errorMsg"  >Preencha todos os Campos acima *</p>
+</div>
+
+<div mat-dialog-actions class="btnDialog">
+  <button class="btnDone" mat-button mat-dialog-close>Fechar</button>
+  <button class="btnSave" mat-button (click)="cadastrar()">Salvar</button>
+</div>

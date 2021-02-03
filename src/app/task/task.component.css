@@ -1,0 +1,385 @@
+
+@media only screen and (max-width: 500px) {
+    .btnDell{
+        position: relative;
+        left: 76% !important
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+    .btnDell{
+        position: relative;
+        left: 88% !important
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .btnDell{
+        position: relative;
+        left: 91% !important
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .btnDell{
+        position: relative;
+        left: 91% !important
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .btnDell{
+        position: relative;
+        left: 95% !important
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .btnSearch{
+        position: relative;
+        left: 22% !important;
+        color: palevioletred;
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+    .btnSearch{
+        position: relative;
+        left: 38% !important; 
+        color: palevioletred;
+    }
+    .subSearch{
+        width: 662px !important; 
+        margin-left: 5px;
+         margin-right: 3px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .btnSearch{
+        position: relative;
+        left: 40% !important;
+        color: palevioletred;
+    }
+    .subSearch{
+        width: 860px !important; 
+        margin-left: 5px;
+         margin-right: 3px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .btnSearch{
+        position: relative;
+        left: 43% !important;
+        color: palevioletred;
+    }
+    .subSearch{
+        width: 1220px !important; 
+        margin-left: 5px;
+         margin-right: 3px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .btnSearch{
+        position: relative;
+        left: 45% !important;
+        color: palevioletred;
+    }
+    .subSearch{
+        width: 1826px !important; 
+        margin-left: 5px;
+         margin-right: 3px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    
+
+    .tarefa-null{
+        display: flex !important;
+        flex-direction: column !important; 
+        justify-content: center !important;
+        align-items: center !important;
+        position: relative!important;
+        top: 11% !important;
+}
+    
+    
+    .tarefa-null-img{
+        width: 360px !important;
+    }
+    
+    .tarefa-null-msg-1{
+        font-weight: 500;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        color: #a2a2a2
+    }
+    
+    .tarefa-null-msg-2{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 0px !important;
+        font-weight: 500;
+        padding: 5px;
+    }
+    
+    
+    .tarefa-null-btn{
+        color: white;
+        font-weight: 600;
+        vertical-align: text-bottom;
+        height: 40px;
+        margin-left: 0px !important;
+        margin-top: 0px !important;
+    }
+    
+
+}
+
+@media only screen and (max-width: 500px) {
+    .img-part1{
+        width: 40vw !important;
+        position: absolute !important;
+    }
+    
+    .img-part2{
+        width: 100vw !important;
+        height: 30vh;
+    }
+
+    .tarefa-null-btn{
+        margin-top: 10px !important
+    }
+
+    
+}
+
+
+@media only screen and (min-width: 1100px) {
+    .img-part1{
+        display: none;
+    }
+    
+    .img-part2{
+        display: none;
+    }
+
+    .tarefa-null{
+        position: relative !important;
+        top: 10% !important
+    }
+
+    .container-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }        
+}
+
+ @media only screen and (min-width: 1500px) {
+    .img-part1{
+      display: none;
+    }
+
+    .img-part2{
+        display: none;
+    }
+    .tarefa-null{
+        position: relative !important;
+        top: 24% !important
+    }
+
+    .container-2{
+        display: none;
+    }
+
+}  
+
+
+.mat-card-Sombra{
+    box-shadow: none;
+}
+
+
+.tarefa-null{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.tarefa-null-img{
+    width: 400px;
+}
+
+.tarefa-null-msg-1{
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    color: #a2a2a2
+}
+
+.tarefa-null-msg-2{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+
+.tarefa-null-btn{
+    color: white;
+    font: 500;
+    font-weight: 600;
+    vertical-align: text-bottom;
+    height: 40px;
+    background-color: #640efd;
+    margin-top: 15px;
+}
+
+.formSearch{
+    margin-top: 15px;
+}
+
+.subSearch{
+    width: 260px; 
+    margin-left: 5px;
+     margin-right: 3px;
+}
+
+.iconSearch{
+    color: antiquewhite;
+}
+
+.btnSearch{
+    position: relative;
+    left: 43%;
+    color: palevioletred;
+}
+
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+
+h1{
+    margin-bottom: 0px;
+    color: black;
+}
+
+.subtitle{
+    margin: 0px;
+}
+
+
+.c-flex{
+    display: flex;
+    align-items: center;
+    
+}
+
+.taskSubTitle{
+    
+    color: #757575;
+    
+}
+
+.c-icon{
+    margin-right: 16px;
+    padding: 4px;
+    border-radius: 55%;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+mat-card{
+   background-color: white;
+    height: 100vh;
+    margin-bottom: 15px;
+}
+
+
+
+
+.mat-expansion-panel {
+    margin-bottom: 25px;
+    margin-top: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.mat-expansion-panel-header{
+    height: 58px;
+}
+
+h3{
+    margin-bottom: 0px;
+}
+
+p{
+    margin-top: 5px;
+}
+
+.h3-task{
+    font-weight: 500;
+}
+.btnDell{
+    position: relative;
+    left: 95%;
+}
+
+.mat-accordion>.mat-expansion-panel-spacing:last-child{
+    margin-bottom: 20px;
+}
+
+i{
+    font-size: 18px;
+    margin-left: 8px;
+    margin-bottom: 2px;
+}
+
+.deleteIcon{
+margin-top: 1px;
+}
+
+.mat-form-field-label{
+    color:green !important;
+  }
+  .mat-form-field-underline{
+    background-color:green !important;
+  }
+
+  .container-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.container-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+ .img-part1{
+    width: 13vw;
+   
+}
+
+.img-part2{
+    width: 30vw;
+    
+}
