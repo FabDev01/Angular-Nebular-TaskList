@@ -1,14 +1,14 @@
-<div class="row mx-2" *ngIf="tarefas.length >= 1 ">
+<div class="row mx-2" *ngIf="tarefas.length > 0 ">
     <div class="col-12">
         <mat-card *ngIf="true" class="mat-card-Sombra">
             <h2 class="subtitle" *ngIf="search === true">Pesquisar tarefa</h2>
             <div class="title">
-                <h1 class="subtitle" *ngIf="search === false">Tarefas</h1>
+                <h1 class="subtitle" *ngIf="search === false">Tarefas <mat-icon style="position: absolute; margin-top: 3px;" class="mat-18">receipt_long</mat-icon></h1>
 
                 <form *ngIf="search === true" class="formSearch">
                     <mat-form-field class="subSearch">
                         <mat-label>Insira o nome da Tarefa</mat-label>
-                        <input matInput placeholder="Ex. Lavar o Carro" autocomplete="off" />
+                        <input matInput placeholder="Ex. Lavar o Carro" autocomplete="off" (keyup)="filter($event)" />
                     </mat-form-field>
                     <button mat-mini-fab aria-label (click)="closeLupe()">
                         <mat-icon>close</mat-icon>
@@ -26,7 +26,7 @@
             </div>
         
         <div>
-            <mat-accordion  *ngFor="let task of tarefas " >  
+            <mat-accordion  *ngFor="let task of tarefasFiltradas " >  
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                     <mat-expansion-panel-header>
                         <mat-panel-title>
@@ -52,10 +52,6 @@
         </mat-card>
     </div>
 </div>
-<div class="container-1" *ngIf="tarefas.length === 0 ">
-    <img class="img-part1"  src="../../assets/part-1.png" alt="a">
-</div>
-
     <div class="tarefa-null" *ngIf="tarefas.length === 0 ">
         
         <img class="tarefa-null-img" src="assets/pixeltrue-idea.png" alt="logo" />
@@ -67,7 +63,3 @@
             Começar
         </button>
     </div>
-
-    <div class="container-2" *ngIf="tarefas.length === 0 ">
-        <img class="img-part2" src="../../assets/part-2.png" alt="a">
-</div>

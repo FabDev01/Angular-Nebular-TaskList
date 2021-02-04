@@ -3,5 +3,5 @@ export interface dialogLembreteModel {
     icon: string
     color: string
     description: string
-    _id?: string;
+    id: string;
 };

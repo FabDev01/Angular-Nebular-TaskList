@@ -1,1 +1,28 @@
-<app-task></app-task>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over" [(opened)]="opened">
+        <div routerLinkActive="active" class="wrap-menu-item">
+            <a (click)="opened = false" routerLink="/home">
+                <mat-icon routerLinkActive="icon-active" aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon>
+                <h3 routerLinkActive="text-active" class="align">Mural</h3>
+            </a>
+        </div>
+        
+        <div routerLinkActive="active" class="wrap-menu-item">
+            <a (click)="opened = false" routerLink="/task">
+                <mat-icon routerLinkActive="icon-active" aria-hidden="false" aria-label="Example home icon">notifications_active</mat-icon>
+                <h3 routerLinkActive="text-active" class="align">Tarefas</h3>
+            </a>
+        </div>
+        
+    </mat-sidenav>
+
+    <mat-sidenav-content  >
+        <mat-toolbar class="c-background-a700">
+            <button (click)="opened = true" mat-icon-button aria-label="Example icon button with a menu icon">
+                <mat-icon class="c-white">menu</mat-icon>
+            </button>
+        </mat-toolbar>
+        <div class="container-router">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>

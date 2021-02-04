@@ -23,25 +23,38 @@ export interface Lembrete {
 
 export class TaskComponent implements OnInit {
 
-tarefa: dialogLembreteModel
-tarefas: dialogLembreteModel[]
+tarefa: dialogLembreteModel[]
+
+tarefas: Lembrete[]
+tarefasFiltradas: Lembrete[]
 
 public search: boolean = false
 public lupe: boolean = true
 
-  constructor(public dialog: MatDialog, private taskService: TaskService) { this.listarTarefas() }
+  constructor(public dialog: MatDialog, private taskService: TaskService) { }
 
   ngOnInit(): void {
     this.listarTarefas()
+
   }
 
 listarTarefas(){
-  this.taskService.listarTarefas().subscribe((response: dialogLembreteModel[]) =>{
+  this.taskService.listarTarefas().subscribe((response:Lembrete[]) =>{
     this.tarefas = response
+    this.tarefasFiltradas = response
     console.log(response)
   })
 }
 
+filter(event: KeyboardEvent): void {
+  const inputValue = event.target as HTMLInputElement;
+  if (inputValue.value.length === 0) {
+    this.tarefasFiltradas = this.tarefas;
+  } else {
+    const regex = RegExp(inputValue.value.toLowerCase());
+    this.tarefasFiltradas = this.tarefasFiltradas.filter(/*parâmetro*/ tarefas => !!regex.exec(tarefas.name.toLowerCase()));
+  }
+}
 
 remover(id: number){
   this.taskService.removerTarefa(id).subscribe(tarefas => {

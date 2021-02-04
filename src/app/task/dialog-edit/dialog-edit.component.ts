@@ -24,7 +24,7 @@ export class DialogEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.tarefa = this.dataTask
-    this.taskService.listarTarefas().subscribe()
+    this.taskService.listarTarefas()
   }
 
   salvarEdit(id:any) {

@@ -9,14 +9,16 @@ import { DialogEditComponent } from './task/dialog-edit/dialog-edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule }   from '@angular/forms';
 import {TaskService} from '../app/services/task.service'
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
     DialogAddComponent,
-    DialogEditComponent
+    DialogEditComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

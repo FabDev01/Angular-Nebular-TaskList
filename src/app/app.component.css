@@ -1,0 +1,125 @@
+mat-sidenav-container {
+    height: 100%;
+  }
+  
+  mat-sidenav {
+    padding: 12px;
+    height: 100%;
+  }
+  
+ 
+  
+  mat-sidenav {
+    width: 270px;
+    padding: 12px;
+  }
+  
+  .align {
+    display: flex;
+    align-items: center;
+  }
+  h3 {
+    margin: 0px;
+    color: #6200ea;
+  }
+  
+  .active {
+    background: #6200ea;
+  }
+  
+  .wrap-menu-item {
+    border-radius: 6px;
+    padding: 10px 0px 10px 20px;
+  }
+  
+  .text-active {
+    color: #ffffff;
+  }
+  
+  .icons-menu {
+    margin-right: 6px;
+    font-size: 5.7rem;
+    position: relative;
+    bottom: 1.8rem;
+    opacity: 0.2;
+    right: 2.8rem;
+  }
+  
+  mat-card {
+    margin: 3px;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  mat-sidenav mat-icon {
+    margin-right: 18px;
+    color: #6200ea;
+    opacity: 0.8;
+  }
+  
+  .icon-active {
+    color: #ffffff !important;
+  }
+  
+  a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .iconClose {
+    margin: 0px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .card-box {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .container-router {
+    margin-bottom: 10px;
+  }
+  .example-action-buttons {
+    padding-bottom: 20px;
+  }
+  .example-headers-align .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .priority-icon {
+    margin-left: 8px;
+  }
+  
+  ::ng-deep .mat-expansion-indicator {
+    position: relative;
+    bottom: 3px;
+  }
+  
+  .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    display: flex;
+    align-items: center;
+  }
+  
+  mat-expansion-panel {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  mat-toolbar{
+   background-color: #6200ea;
+  }
+
+  .c-white{
+    color: white;
+  }
