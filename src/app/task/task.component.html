@@ -1,9 +1,10 @@
 <div class="row mx-2" *ngIf="tarefas.length > 0 ">
     <div class="col-12">
         <mat-card *ngIf="true" class="mat-card-Sombra">
-            <h2 class="subtitle" *ngIf="search === true">Pesquisar tarefa</h2>
+            <h2 class="subtitle" *ngIf="search === true">Pesquisar tarefa </h2>
             <div class="title">
-                <h1 class="subtitle" *ngIf="search === false">Tarefas <mat-icon style="position: absolute; margin-top: 3px;" class="mat-18">receipt_long</mat-icon></h1>
+                <h1 class="subtitle" *ngIf="search === false">Tarefas<mat-icon style="position: absolute; margin-top: 1px; color: #6200ea;
+                    font-size: 31px; " class="mat-18">bookmark</mat-icon></h1>
 
                 <form *ngIf="search === true" class="formSearch">
                     <mat-form-field class="subSearch">

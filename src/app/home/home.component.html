@@ -1,1 +1,22 @@
-<p>home works!</p>
+<div>
+    
+  <mat-card-header style="margin-top: 13px;">
+    <mat-card-title>Olá, Bem vindo <mat-icon class="sub-title-icon">offline_bolt</mat-icon></mat-card-title>
+    <mat-card-subtitle>{{ date | date: "mediumDate" }}</mat-card-subtitle>
+  </mat-card-header>
+
+
+<mat-card class="card-sub" >
+  <mat-card-header>
+    <mat-card-title style="color: #fdfdfd">Numero de Tarefas <mat-icon class="title-icon">star</mat-icon></mat-card-title>
+  </mat-card-header>
+  <div class="container"> 
+      <div>
+        <div class="lds-dual-ring"></div>
+        <h1>{{tarefas.length}}</h1>
+      </div>
+  <img class="Home-img" src="assets/pixeltrue-vision-1.png" alt="logo" />
+</div>
+
+</mat-card>
+</div>

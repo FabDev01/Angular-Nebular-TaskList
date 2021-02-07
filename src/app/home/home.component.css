@@ -1,0 +1,94 @@
+.card-sub {
+  margin: 10px;
+  height: 65vh;
+  background-color: #f5827d;
+}
+
+mat-card-footer {
+  display: flex;
+  margin: 28px 0px 0px 0px;
+  justify-content: flex-end;
+}
+
+mat-card-subtitle {
+  margin-left: 4px;
+  font-size: 17px;
+}
+
+.sub-title-icon {
+  color: #6200ea;
+  font-size: 35px;
+  vertical-align: sub;
+}
+
+.title-icon {
+  color: #ffd402;
+  font-size: 35px;
+  vertical-align: bottom;
+  margin-bottom: 5px;
+}
+
+.mat-card-header .mat-card-title {
+  margin-bottom: 17px;
+  font-size: 28.7px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home-img {
+  width: 90vw;
+  position: relative;
+  top: 36%;
+}
+
+h1 {
+  font: 400 90px/134px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(253, 253, 253);
+  border-color: #6200ea transparent #6200ea transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+  position: relative;
+  right: 50%;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+    .Home-img {
+        width: 23vw;
+        position: relative;
+        top: 36%;
+      }
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .Home-img {
+        width: 30vw;
+        position: relative;
+        top: 36%;
+      }
+  }

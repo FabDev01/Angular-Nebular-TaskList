@@ -5,7 +5,8 @@ import { TaskComponent } from './task/task.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
-  {path:'task', component:TaskComponent}
+  {path:'task', component:TaskComponent},
+  {path: '', redirectTo: 'home' , pathMatch: 'full' }
 ];
 
 @NgModule({
