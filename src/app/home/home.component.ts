@@ -10,17 +10,23 @@ import {dialogLembreteModel} from '../task/dialog-add/dialogLembrete.model'
 })
 export class HomeComponent implements OnInit {
    date: Date = new Date();
+
+//model Crud//
    tarefas: Lembrete[]
    tarefa: dialogLembreteModel[]
-   filtroTarefas: Lembrete[]
-   filtroTarefas2: Lembrete[]
+
+//filtros model//
+   filtroHome: Lembrete[]
+   filtroKitchen: Lembrete[]
+   filtroTransport:Lembrete[]
+   filtroClothes: Lembrete[]
+   filtroOthers: Lembrete[]
+
   constructor(private taskService: TaskService ) { }
 
   ngOnInit(): void {
     this.listarTarefas()
-    // console.log(this.tarefas)
-    
-    
+
   }
 
   listarTarefas(){
@@ -29,20 +35,34 @@ export class HomeComponent implements OnInit {
       console.log(response)
       this.filtros()
      
-
-      console.log(this.filtroTarefas2)
-      console.log(this.filtroTarefas)
+      console.log(this.filtroKitchen,this.filtroHome,this.filtroClothes,this.filtroTransport,this.filtroOthers)
+      console.log(this.filtroHome)
     })
   }
 
   filtros(){
-    this.filtroTarefas = this.tarefas.filter((tarefa: Lembrete) =>{
-      return tarefa.icon === "home"
+    this.filtroHome = this.tarefas.filter((param: Lembrete) =>{
+      return param.icon === "home"
+     
+    }),
+
+    this.filtroKitchen =  this.tarefas.filter((tarefa: Lembrete) =>{
+      return tarefa.icon === "kitchen"
      
     })
 
-    this.filtroTarefas2 =  this.tarefas.filter((tarefa: Lembrete) =>{
-      return tarefa.icon === "kitchen"
+    this.filtroTransport =  this.tarefas.filter((tarefa: Lembrete) =>{
+      return tarefa.icon === "commute"
+     
+    })
+
+    this.filtroClothes =  this.tarefas.filter((tarefa: Lembrete) =>{
+      return tarefa.icon === "loyalty"
+     
+    })
+
+    this.filtroOthers =  this.tarefas.filter((tarefa: Lembrete) =>{
+      return tarefa.icon === "extension"
      
     })
   }

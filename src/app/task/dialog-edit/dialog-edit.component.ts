@@ -38,7 +38,7 @@ export class DialogEditComponent implements OnInit {
       this.tarefa.color = '#605ef3'
     }
     if (this.tarefa.icon === 'home') {
-      this.tarefa.color = '#0000ff'
+      this.tarefa.color = '#cc00ff'
     }
     if (this.tarefa.icon === 'extension') {
       this.tarefa.color = '#2ba74b'

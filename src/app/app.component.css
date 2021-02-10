@@ -54,11 +54,11 @@ mat-sidenav-container {
   mat-sidenav mat-icon {
     margin-right: 18px;
     color: #6200ea;
-    opacity: 0.8;
+    
   }
   
   .icon-active {
-    color: #ffffff !important;
+    color: #ffd700 !important;
   }
   
   a {
