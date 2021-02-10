@@ -115,7 +115,8 @@
   }
 
   .tarefa-null-img {
-    width: 360px !important;
+    width: 334px !important;
+    margin-left: 26px !important;
   }
 
   .tarefa-null-msg-1 {

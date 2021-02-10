@@ -1,22 +1,61 @@
 <div>
-    
-  <mat-card-header style="margin-top: 13px;">
-    <mat-card-title>Olá, Bem vindo <mat-icon class="sub-title-icon">offline_bolt</mat-icon></mat-card-title>
-    <mat-card-subtitle>{{ date | date: "mediumDate" }}</mat-card-subtitle>
-  </mat-card-header>
+  <mat-card class="card-sub">
+    <mat-card-header style="margin-top: 13px">
+      <mat-card-title style="color: white"
+        >Olá, Bem vindo
+        <mat-icon class="sub-title-icon">offline_bolt</mat-icon></mat-card-title
+      >
+      <mat-card-subtitle>{{ date | date: "mediumDate" }}</mat-card-subtitle>
+    </mat-card-header>
 
-
-<mat-card class="card-sub" >
-  <mat-card-header>
-    <mat-card-title style="color: #fdfdfd">Numero de Tarefas <mat-icon class="title-icon">star</mat-icon></mat-card-title>
-  </mat-card-header>
-  <div class="container"> 
-      <div>
-        <div class="lds-dual-ring"></div>
+    <mat-card-header>
+      <!-- <mat-card-title style="color: #fdfdfd">Numero de Tarefas <mat-icon class="title-icon">star</mat-icon></mat-card-title> -->
+    </mat-card-header>
+    <div class="container">
+      <!-- <div>
+        
         <h1>{{tarefas.length}}</h1>
-      </div>
-  <img class="Home-img" src="assets/pixeltrue-vision-1.png" alt="logo" />
+      </div> -->
+      <img
+        class="Home-img"
+        src="assets/pixeltrue-working-in-a-laboratory-1.png"
+        alt="logo"
+      />
+    </div>
+  </mat-card>
+</div>
+<mat-divider style="margin-bottom: 10px"></mat-divider>
+<div class='sub-divider'>
+  <h1 class="h1-sub-divider">Suas Tarefas</h1>
 </div>
 
-</mat-card>
+<div>
+  <mat-card class="card-task" >
+
+    <div class="card-task-div" >
+      <img class="img-card" src="assets/icons8-martelo-50.png" />
+      <h2 class="h2-icon">Casa</h2>
+    </div>
+  <div>
+    <div class="lds-dual-ring"></div>
+    <h3 style=" font-family: Roboto, Helvetica Neue, sans-serif;
+    font-size: 41.7px;
+    padding: 21px;">{{filtroTarefas.length}}</h3>
+  </div>
+  </mat-card>
+</div>
+<div>
+  <mat-card class="card-task" >
+
+    <div class="card-task-div" >
+      <img class="img-card" src="assets/icons8-cereja-100.png" />
+      <h2 class="h2-icon">Cozinha</h2>
+    </div>
+  <div>
+    <div class="lds-dual-ring"></div>
+    <h3 style=" font-family: Roboto, Helvetica Neue, sans-serif;
+    font-size: 41.7px;
+    padding: 21px;">{{filtroTarefas2.length}}</h3>
+  </div>
+  </mat-card>
 </div>

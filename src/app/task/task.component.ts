@@ -11,6 +11,7 @@ export interface Lembrete {
   icon: string;
   name: string;
   id: string;
+  
 }
 
 @Component({

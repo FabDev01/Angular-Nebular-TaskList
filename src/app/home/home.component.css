@@ -1,7 +1,7 @@
 .card-sub {
   margin: 10px;
-  height: 65vh;
-  background-color: #f5827d;
+  height: 51vh;
+  background-color: #964cfd;
 }
 
 mat-card-footer {
@@ -12,41 +12,87 @@ mat-card-footer {
 
 mat-card-subtitle {
   margin-left: 4px;
-  font-size: 17px;
+  margin-top: 10px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #00ff7e;
+  font-weight: 600;
+  font-size: 20px;
 }
 
+mat-divider{
+  border-top-color: #bbbbbb;
+  margin-left: 150px !important;
+  margin-right: 150px!important ;
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+  display: block;
+  margin: 12px;
+  border-top-width: 2px;
+  border-top-style: solid;
+}
 .sub-title-icon {
-  color: #6200ea;
+  color: #ffd402;
   font-size: 35px;
   vertical-align: sub;
 }
 
-.title-icon {
+/* .title-icon {
   color: #ffd402;
-  font-size: 35px;
+  /* font-size: 35px;
   vertical-align: bottom;
-  margin-bottom: 5px;
+  margin-bottom: 5px; 
+} */
+
+.card-task{
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+}
+
+.card-task-div{
+  display: flex;flex-direction: column;
+  position: relative; bottom: 25%;
+}
+
+.img-card{
+  width: 73px;
+  margin-top: 2px;
+}
+
+.h2-icon{
+  margin-left: 14px; top: 100%;
+  position: absolute;
 }
 
 .mat-card-header .mat-card-title {
-  margin-bottom: 17px;
-  font-size: 28.7px;
+  margin-bottom: 20px;
+  font-size: 32.7px;
 }
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 0%;
 }
 
 .Home-img {
-  width: 90vw;
-  position: relative;
-  top: 36%;
+  width: 100vw;
+
 }
 
-h1 {
-  font: 400 90px/134px Roboto, "Helvetica Neue", sans-serif;
+.sub-divider {
+  display: flex;
+  justify-content: center;
+}
+
+.h1-sub-divider{
+  font-weight: 500;
 }
 
 .lds-dual-ring {
@@ -58,15 +104,16 @@ h1 {
 .lds-dual-ring:after {
   content: " ";
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   margin: 8px;
   border-radius: 50%;
   border: 6px solid rgb(253, 253, 253);
-  border-color: #6200ea transparent #6200ea transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
+  border-color: #00ff7e transparent #00ff7e transparent;
+  animation: lds-dual-ring 1.4s linear infinite;
   position: relative;
-  right: 50%;
+  right: 8%;
+  bottom: 5%;
 }
 @keyframes lds-dual-ring {
   0% {
