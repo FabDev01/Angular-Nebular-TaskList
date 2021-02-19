@@ -29,6 +29,7 @@ tarefa: dialogLembreteModel[]
 tarefas: Lembrete[]
 tarefasFiltradas: Lembrete[]
 
+
 public search: boolean = false
 public lupe: boolean = true
 
@@ -36,16 +37,20 @@ public lupe: boolean = true
 
   ngOnInit(): void {
     this.listarTarefas()
-
+    
   }
 
 listarTarefas(){
   this.taskService.listarTarefas().subscribe((response:Lembrete[]) =>{
     this.tarefas = response
     this.tarefasFiltradas = response
+    this.tarefas = response.sort((a, b) => (a.name > b.name) ? 1 : -1)
     console.log(response)
   })
 }
+
+
+
 
 filter(event: KeyboardEvent): void {
   const inputValue = event.target as HTMLInputElement;
@@ -90,5 +95,8 @@ openDialogLembreteEdit(task: Lembrete) {
   dialogRef.afterClosed().subscribe(() => { })
 }
 
+sortFunc (a, b) {
+  return a.CREATE_TS - b.CREATE_TS
+}
 
 }

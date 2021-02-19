@@ -35,8 +35,8 @@ export class HomeComponent implements OnInit {
       console.log(response)
       this.filtros()
      
-      console.log(this.filtroKitchen,this.filtroHome,this.filtroClothes,this.filtroTransport,this.filtroOthers)
-      console.log(this.filtroHome)
+      // console.log(this.filtroKitchen,this.filtroHome,this.filtroClothes,this.filtroTransport,this.filtroOthers)
+      // console.log(this.filtroHome)
     })
   }
 
